@@ -25,6 +25,8 @@ const storeSchema = mongoose.Schema({
       type: mongoose.Schema.Types.ObjectId, ref: 'part',
     },
   ],
+}, {
+  usePushEach: true,
 });
 
 export default mongoose.model('store', storeSchema);
